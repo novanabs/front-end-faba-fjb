@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FABA > Lihat Data Instansi</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../assets/css/adminlte.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="../../assets/css/OverlayScrollbars.min.css">
+    <style>
+        .img_ttd {
+            height: 150px;
+            width: 120px;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+        <!-- LOADING LOGO -->
+        <div class="preloader flex-column justify-content-center align-items-center">
+            <img class="animation__shake" src="../../assets/img/AdminLTELogo.png" alt="AdminLTELogo" height="60"
+                width="60">
+        </div>
+
+        <!-- NABVAR -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" role="button">
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- END NAVBAR -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="index3.html" class="brand-link">
+                <img src="../../assets/img/AdminLTELogo.png" alt="AdminLTE Logo"
+                    class="brand-image img-circle elevation-3" style="opacity: .8">
+                <span class="brand-text font-weight-light">FABA FJB</span>
+            </a>
+
+            <!--===================== SIDEBAR ===================================-->
+            <div class="sidebar">
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img src="../../assets/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                    </div>
+                    <div class="info">
+                        <a href="#" class="d-block">M. HIfdzi Adini</a>
+                    </div>
+                </div>
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
+
+                        <!-- DASHBOARD -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-dashboard"></i>
+                                <p>
+                                    Dashboard
+                                </p>
+                            </a>
+                        </li>
+                        <!-- END DASHBOARD -->
+                        <!-- DATA PEMANFATAAN -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-hand-holding-heart"></i>
+                                <p>
+                                    Data Pemanfataan
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="pages/layout/top-nav.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Pengaturan</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Tambah Data</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/layout/boxed.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Lihat Data</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/layout/fixed-sidebar.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Edit Data</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/layout/fixed-sidebar-custom.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Cetak Data Instansi</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- END DATA PEMANFATAAN -->
+                        <!-- DATA REALISASI -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-handshake"></i>
+                                <p>
+                                    Data Realisasi
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="pages/layout/top-nav.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Pengaturan</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Tambah Data</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/layout/boxed.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Lihat Data</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/layout/fixed-sidebar.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Edit Data</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/layout/fixed-sidebar-custom.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Cetak Data Instansi</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- END DATA REALISASI -->
+                        <li class="nav-header">MASTER DATA</li>
+                        <!-- KARYAWAN -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-user"></i>
+                                <p>
+                                    Karyawan
+                                </p>
+                            </a>
+                        </li>
+                        <!-- END KARYAWAN -->
+                        <!-- DATA JABATAN -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-user-tie"></i>
+                                <p>
+                                    Jabatan
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="pages/layout/top-nav.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Pengaturan</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Tambah Data</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/layout/boxed.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Lihat Data</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/layout/fixed-sidebar.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Edit Data</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/layout/fixed-sidebar-custom.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Cetak Data Instansi</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- END DATA JABATAN -->
+                        <!-- DATA INSTANSI -->
+                        <li class="nav-item menu-open">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-landmark"></i>
+                                <p>
+                                    Instansi
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="pages/layout/top-nav.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Pengaturan</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Tambah Data</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/layout/boxed.html" class="nav-link active">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Lihat Data</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/layout/fixed-sidebar.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Edit Data</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/layout/fixed-sidebar-custom.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Cetak Data Instansi</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- END DATA INSTANSI -->
+                        <!-- DATA LIMBAH -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-recycle"></i>
+                                <p>
+                                    Limbah
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="pages/layout/top-nav.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Pengaturan</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Tambah Data</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/layout/boxed.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Lihat Data</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/layout/fixed-sidebar.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Edit Data</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/layout/fixed-sidebar-custom.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Cetak Data Instansi</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- END DATA LIMBAH -->
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!--===================== END SIDEBAR ===================================-->
+        </aside>
+
+        <!--===================== CONTENT WRAPPER =====================-->
+        <div class="content-wrapper">
+            <!-- CONTENT HEADER -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0">Lihat Data Instansi</h1>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Lihat Data Instansi</a></li>
+                                <li class="breadcrumb-item active">Data Instansi</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END CONTENT HEADER -->
+            <!-- MAIN CONTENT -->
+            <section class="content">
+                <div class="container-fluid">
+                    <!-- MAIN ROW -->
+                    <div class="row">
+                        <!-- DAFTAR KARYAWAN -->
+                        <section class="col-lg-6  border p-2">
+                            <!-- TAMBAH KARYAWAN -->
+                            <form action="" id="adm_lihat">
+                                <section class="row connectedSortable border-2 p-2">
+                                    <!-- PIC -->
+                                    <div class="col-12 mb-2">
+                                        <label for="pic" class="form-label">Nama Penanggung Jawab</label>
+                                        <input type="text" class="form-control" id="pic">
+                                    </div>
+                                    <!-- Jabatan PIC -->
+                                    <div class="col-12 mb-2"><label for="text" class="form-label">Jabatan Penanggung
+                                            Jawab</label>
+                                        <input type="text" class="form-control" id="jabatan_pic">
+                                    </div>
+                                    <!-- NAMA INSTANSI -->
+                                    <div class="col-12 mb-2">
+                                        <label for="nama_instansi" class="form-label">Nama Instansi</label>
+                                        <input type="text" class="form-control" id="nama_instansi">
+                                    </div>
+                                    <!-- ALAMAT -->
+                                    <div class="col-12 mb-2">
+                                        <label for="jabatan" class="form-label">Alamat</label>
+                                        <textarea class="form-control" name="alamat" id="" cols="30"
+                                            rows="2"></textarea>
+                                    </div>
+                                    <div class="col-12 mb-2">
+                                        <div class="row">
+                                            <label for="jabatan" class="col-3 form-label">Tanda tangan</label>
+                                            <div class="img_ttd">
+                                                <!-- IMG -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-end pt-2 col-12">
+                                        <button class="btn btn-danger" id="kembali">Kembali</button>
+                                        <!-- <button class="ml-2 btn btn-primary" id="tambah">Tambah</button> -->
+                                    </div>
+                                </section>
+                            </form>
+                            <!-- END TAMBAH KARYAWAN -->
+                        </section>
+                        <!-- END DAFTAR KARYAWAN -->
+                    </div>
+                    <!-- END MAIN ROW -->
+                </div>
+                <!-- END CONTAINER FLUID -->
+            </section>
+            <!-- END CONTENT -->
+        </div>
+        <!--===================== END CONTENT WRAPPER =====================-->
+        <footer class="main-footer">
+            <strong>Copyright &copy; 2022 <a href="https://adminlte.io">FABA-FJB</a>.</strong>
+            All rights reserved.
+            <div class="float-right d-none d-sm-inline-block">
+                <b>Version</b> 1.0.0
+            </div>
+        </footer>
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+
+    <!------------------------------------ ALL JS-------------------------------------------------------------------------- -->
+    <!-- jQuery -->
+    <script src="../../assets/js/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../assets/js/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+        $.widget.bridge('uibutton', $.ui.button)
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <!-- daterangepicker -->
+    <script src="../../assets/js/moment.min.js"></script>
+    <script src="../../assets/js/daterangepicker.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="../../assets/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../assets/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../assets/js/adminlte.js"></script>
+    <!-- JQUERY DATATABLE -->
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <!-- DATATABLE BOOTSTRAP -->
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script>
+</body>
+
+</html>
