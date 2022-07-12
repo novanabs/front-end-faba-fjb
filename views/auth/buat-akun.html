@@ -8,14 +8,24 @@
     <title>Home FABA FJB
 
     </title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../..//assets/css/login-style.css">
     <style>
         .logo {
-            height: 120px !important;
-            width: 120px !important;
-            background-color: orange;
+            height: 150px !important;
+            width: 260px !important;
+            /* background-color: orange; */
             border-radius: 3px;
+        }
+
+        a#login:hover {
+            padding-left: 5px;
+            padding-right: 5px;
+            border-radius: 5px !important;
+            background-color: rgb(255, 132, 0) !important;
+            color: white !important;
         }
     </style>
 </head>
@@ -24,42 +34,44 @@
     <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
         <!-- LOGO -->
         <div class="d-flex justify-content-center mb-3">
-            <div class="logo d-flex align-items-center justify-content-center">
-                <img src="#" alt="LOGO" class="#">
+            <div class=" d-flex align-items-center justify-content-center">
+                <img src="../../assets/img/pjblogo.png" class="logo">
             </div>
         </div>
         <!-- BOX -->
-        <div class="col-lg-6 col-md-8 col-12 bg-success border-2">
-            <div class="d-flex justify-content-center bg-warning" style="height: 100%;">
+        <div class="col-lg-6 col-md-8 col-12 border-2" style="background-color: #f0f0f0;">
+            <div class="d-flex justify-content-center " style="height: 100%;">
                 <div class="col-6 p-lg-4 p-md-2 p-sm-0">
                     <!-- TITLE -->
-                    <h3 class="text-center">Log In</h3>
+                    <h3 class="text-center">Registrasi Akun</h3>
                     <!-- EMAIL -->
-                    <div class="col-12 mb-3">
-                        <label for="nid" class="form-label">Email</label>
+                    <div class="col-12 mb-3 pl-0">
+                        <label for="nid" class="form-label text-dark">Email</label>
                         <input type="text" class="form-control" id="email" placeholder="email">
                     </div>
                     <!-- NID -->
-                    <div class="col-12 mb-3">
-                        <label for="nid" class="form-label">NID</label>
+                    <div class="col-12 mb-3 pl-0">
+                        <label for="nid" class="form-label text-dark">NID</label>
                         <input type="text" class="form-control" id="nid" placeholder="NID">
                     </div>
                     <!-- PASSWORD -->
-                    <div class="col-12 mb-3">
-                        <label for="password" class="form-label">Password</label>
+                    <div class="col-12 mb-3 pl-0">
+                        <label for="password" class="form-label text-dark">Password</label>
                         <input type="password" class="form-control" id="password" placeholder="password">
                     </div>
                     <!-- CONFIRM PASSWORD -->
-                    <label for="password_comfirmation" class="form-label">Konfirmasi Password</label>
+                    <label for="password_comfirmation" class="form-label text-dark">Konfirmasi Password</label>
                     <input type="password_comfirmation" class="form-control" id="password_comfirmation"
                         placeholder="password comfirmation">
                     <!-- <span>Pastikan kedua password sama</span> -->
                     <div class="d-grid gap-2 mt-3">
-                        <a class="btn bg-primary text-white" href="login.html">Daftar</a>
+                        <a class="form-control btn btn-primary submit px-3" href="login.html">Daftar</a>
                     </div>
                     <!-- LABEL TERBAWAH -->
                     <div class="mt-3">
-                        <label class="col-12" for="#">Sudah mempunyai akun ? <a href="#"> Log in</a></label>
+                        <label class="col-12" for="#">Sudah mempunyai akun ? <a id="login"
+                                href="../../views/auth/login.html"> Log
+                                in</a></label>
                     </div>
                 </div>
             </div>
